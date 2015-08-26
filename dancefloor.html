@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
-    <script src="src/init.js"></script>
-  </body>
+
+<head>
+  <title>Object Dance Party</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="lib/jquery.js"></script>
+  <script src="src/dancer.js"></script>
+  <script src="src/blinkyDancer.js"></script>
+  <script src="src/bhangraDancer.js"></script>
+  <script src="src/blinkyColorfulDancer.js"></script>
+  <script src="src/timDancer.js"></script>
+  <script src="src/moonWalk.js"></script>
+  <!-- <embed src="music/01-here-we-go.mp3" class='music'  volume="10" autostart="false" loop="false" hidden="true"> -->
+</head>
+
+<body>
+  <div class="topbar">
+    <audio id="myTune" controls >
+      <source src="music/01-here-we-go.mp3">
+    </audio>
+    <span class="title">object dance party</span>
+    <a href="#" class="lineUpButton">
+      Line Up</a>
+    <a href="#" class="addDancerButton" data-dancer-maker-function-name="TimDancer">
+      Tim Time</a>
+    <!--  <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">
+      blinky dancer</a> -->
+    <a href="#" class="addDancerButton" data-dancer-maker-function-name="BhangraDancer">
+      BHANGRA BABY</a>
+    <a href="#" class="addDancerButton" data-dancer-maker-function-name="MoonWalk">
+      MOONWALK</a>
+    <!--  <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyColorfulDancer">
+      colorful dancer</a> -->
+  </div>
+  <div class='dj'></div>
+  <script src="src/init.js"></script>
+</body>
+
 </html>

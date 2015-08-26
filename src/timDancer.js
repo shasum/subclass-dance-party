@@ -1,13 +1,13 @@
-var BlinkyDancer = function(top, left, timeBetweenSteps){
+var TimDancer = function(top, left, timeBetweenSteps){
 
   Dancer.call(this, top, left, timeBetweenSteps);
-
+  this.$node.addClass('tim')
 };
 
-BlinkyDancer.prototype = Object.create(Dancer.prototype);
-BlinkyDancer.prototype.constructor = BlinkyDancer;
+TimDancer.prototype = Object.create(Dancer.prototype);
+TimDancer.prototype.constructor = TimDancer;
 
-BlinkyDancer.prototype.step = function(){
+TimDancer.prototype.step = function(){
   // call the old version of step at the beginning
   // of any call to this new version of step
   //
@@ -17,9 +17,9 @@ BlinkyDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //
-  this.$node.toggle();
+  //this.$node.toggle();
 };
 
-BlinkyDancer.prototype.lineUp = function(){
-  Dancer.prototype.lineUp.call(this, 'left', '10px');
+TimDancer.prototype.lineUp = function(){
+  Dancer.prototype.lineUp.call(this, 'bottom', '10px');
 };

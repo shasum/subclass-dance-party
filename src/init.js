@@ -1,6 +1,12 @@
 $(document).ready(function(){
   window.dancers = [];
 
+   $(".lineUpButton").on("click", function(event){
+    for(var i =0; i < window.dancers.length; i++){
+      window.dancers[i].lineUp();
+    }
+   });
+
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -19,16 +25,35 @@ $(document).ready(function(){
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
+    console.log(dancerMakerFunction)
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
+    var dancer = new dancerMakerFunction(
+      //$("body").height() * Math.random(),
+      '5%',
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 2000
     );
     $('body').append(dancer.$node);
 
-  });
-});
+    window.dancers.push(dancer);
 
+  });
+
+   $("body").on("mouseenter", ".dancer",function(event){
+     $(this).toggleClass('bhangra');
+   });
+
+   $("body").on({
+    mouseenter: function () {
+      $(this).addClass('grow');
+    },
+    mouseleave: function () {
+      $(this).removeClass('grow');
+    }}, ".dancer");
+
+  // $(".dancer").mouseover(function(){
+  //
+  // });
+});

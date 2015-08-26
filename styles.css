@@ -5,9 +5,38 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  font-family: monospace;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+*{
+
+
+  cursor: url(http://findicons.com/files/icons/2652/gentleface/48/target_icon.png) no-repeat !important;
+
+}
+body{
+  background: #666 url(images/nsFJoNv.jpg) no-repeat;
+  background-size:cover;
+  background-position: bottom;
+}
+.dj{
+  background: transparent url(images/disco.gif) no-repeat;
+  width:600px;
+  height:180px;
+  position:absolute;
+  bottom:0px;
+  left:10%;
+
+}
+.lineUpButton{
+  padding:5px 12px;
+  float:right;
 }
 .title, .addDancerButton{
   padding:5px 12px;
@@ -21,7 +50,35 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  position:absolute;
+  cursor:crosshair;
+  transition: all .2s;
+  width:200px;
+  height: 180px;
+}
+
+.dot{
   border:10px solid red;
   border-radius:10px;
-  position:absolute;
+}
+.baby{
+width:200px;
+  height: 230px;
+  background: url(http://38.media.tumblr.com/953c1680d5ed6ecff72bacb243b11b4c/tumblr_nb5qbfGoRQ1txe8e9o1_500.gif) no-repeat;
+  background-size: cover;
+}
+.grow{
+  transform: scale(2,2);
+}
+.tim{
+  background: url(images/tim.gif) no-repeat;
+  background-size: 100%;
+  width:180px;
+  height:250px;
+}
+.moonwalk{
+  background: url(http://rs281.pbsrc.com/albums/kk208/NerDan10/moonwalk1.gif~c200) no-repeat 0 0;
+  background-size: 100%;
+ /* width: 100px;
+  height: 100px;*/
 }
